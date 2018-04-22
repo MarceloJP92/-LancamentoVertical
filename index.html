@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Lançamento Vertical </title>
+
+<style type="text/css">
+.blink { text-decoration: blink; 
+}
+
+.bgimg {
+   
+    background-image: url('images.jpg');
+    position: absolute;
+
+  }   
+body,h1,h2,h3,h4 {font-family: Montserrat, sans-serif }
+
+body, html {height: 100%}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	 function LancamentoVertical()
+  {
+   var v0 = parseFloat($("#velocidade").val());
+
+   console.log(velocidade);
+
+
+   var v=(v0*v0)/10-(v0*v0)/20;
+   var h=v0*3.6;
+
+   document.getElementById("Equivalente").innerHTML=h;
+  document.getElementById("Altura").innerHTML = v;
+    
+
+}
+</script>
+
+</head>
+<body class="bgimg" >
+
+	<h1><marquee style="font-family: arial;" slide direction="left"><span style="color: #f5f5f0 ;">   Vamos Calcular Lançamento Vertical ?? </span></marquee><!--rgb(0, 190, 255)-->
+<font color="white">
+<div style="text-align: center;">
+    <input type="text" id="velocidade" placeholder="velocidade Inicial" required="required" ><!--<br><br>-->
+     <button class="button" type="button" onclick ="LancamentoVertical()">Calcular</button><br>
+     <p ><b> Equivalente em Km/h : <span id="Equivalente"></span>
+    <p > Altura Maxima : <span Id="Altura"></span><h1></font>
+ </div>
+</body>
+</html>
