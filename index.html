@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Lançamento Vertical </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 <style type="text/css">
 .blink { text-decoration: blink; 
 }
@@ -17,6 +17,15 @@
 body,h1,h2,h3,h4 {font-family: Montserrat, sans-serif }
 
 body, html {height: 100%}
+	   @media only screen and (max-width: 400px) {
+    .mobile-hide{ display: none !important; }
+    }
+    @media only screen and (max-width: 400px) {
+    .mobile{ display: inline !important; }
+    }
+    @media only screen and (min-width: 500px) {
+    .desktop-hide{ display: none !important; }
+    }
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -41,14 +50,17 @@ body, html {height: 100%}
 
 </head>
 <body class="bgimg" >
-
+ <div class="mobile-hide"><h1 id="logo"><a href="#">
+ <div class="mobile"><div class="desktop-hide"><h1 class="logomobile"><a href="#">	 
 	<h1><marquee style="font-family: arial;" slide direction="left"><span style="color: #f5f5f0 ;">   Vamos Calcular Lançamento Vertical ?? </span></marquee><!--rgb(0, 190, 255)-->
 <font color="white">
-<div style="text-align: center;">
+<!--<div style="text-align: center;">-->
     <input type="text" id="velocidade" placeholder="velocidade Inicial" required="required" ><!--<br><br>-->
      <button class="button" type="button" onclick ="LancamentoVertical()">Calcular</button><br>
      <p ><b> Equivalente em Km/h : <span id="Equivalente"></span>
     <p > Altura Maxima : <span Id="Altura"></span><h1></font>
- </div>   
+ </div> 
+ </div> 
+ </div> 	
 </body>
 </html>
