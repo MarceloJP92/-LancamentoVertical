@@ -3,11 +3,14 @@
 <html>
 <head>
 	<title>Lançamento Vertical </title>
-
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
+<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
 <style type="text/css">
 .blink { text-decoration: blink; 
 }
-
+@import url("style.css") screen;
+@media (max-width: 600px) 
 .bgimg {
    
     background-image: url('img/images.jpg');
